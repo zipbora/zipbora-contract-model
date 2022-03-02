@@ -13,50 +13,50 @@ const req_with_template_options = {
     Accept: 'application/json',
     'Content-Type': 'application/json',
     // to change to real api keys.
-    Authorization: 'Basic MTIzMTIzOjEyMzEyMw=='
+    Authorization: 'Basic a21rMzAyNEBuYXZlci5jb206WmpNeFpEQTJObU10TURNNVlTMDBNREJrTFdJNE9XVXRNalJoWkdRelptWmtZMlV4'
   },
   body: JSON.stringify({
     document: {
       participantMappings: [
         {
           excluded: false,
-          signingMethod: {type: 'EMAIL', value: 'modu.kim@modusign.co.kr / 01012345678'},
+          signingMethod: {type: 'EMAIL', value: 'posika93@gmail.com'},
           verification: {
-            password: {value: '123123'},
-            mobileIdentification: {name: '임대인 이름', phoneNumber: '임대인 전화번호'},
+            password: {},
+            mobileIdentification: {name: '김민규', phoneNumber: '01029877849'},
             dCert: {}
           },
-          attachmentRequests: [{excluded: false, dataLabel: '신분증', required: true}],
+          attachmentRequests: [{excluded: false, dataLabel: '81c49298', required: true}],
           locale: 'ko',
-          role: '임대인',
+          role: '매도자',
           signingDuration: 20160, // minutes
           requesterMessage: '서명해 주세요.',
           name: '김임대'
         },
         {
           excluded: false,
-          signingMethod: {},
+          signingMethod: {type: 'KAKAO', value: '01029877849'},
           verification: {
             password: {},
-            mobileIdentification: {name: '김임차', phoneNumber: '김임차전화번호'},
+            mobileIdentification: {name: '김임차', phoneNumber: '01029877849'},
             dCert: {}
           },
-          attachmentRequests: [{excluded: false, dataLabel: '신분증', required: true}],
+          attachmentRequests: [{excluded: false, dataLabel: '27c1a3f4', required: true}],
           locale: 'ko',
-          role: '임차인',
+          role: '매수자',
           name: '김임차',
           signingDuration: 180,
           requesterMessage: '서명해 주세요.'
         },
         {
           excluded: false,
-          signingMethod: {},
+          signingMethod: {type: 'EMAIL', value: 'kmk3024@naver.com'},
           verification: {
             password: {},
-            mobileIdentification: {name: '집보라중개사', phoneNumber: '123123123'},
+            mobileIdentification: {name: '집보라중개사', phoneNumber: '01029877849'},
             dCert: {}
           },
-          attachmentRequests: [{excluded: true, dataLabel: '신분증', required: true}],
+          attachmentRequests: [{excluded: true, dataLabel: '1b89ff7c', required: true}],
           locale: 'ko',
           role: '공인중개사',
           name: '집보라중개사',
@@ -64,10 +64,12 @@ const req_with_template_options = {
           requesterMessage: '서명 해 주세요.'
         }
       ],
-      requesterInputMappings: [{dataLabel: '기타'}, {}],
-      title: '부동산 매매계약서'
+      //requesterInputMappings: [{dataLabel: '기타사항', value: '기타사항입니다.'}],
+      title: '부동산 매매계약서_0302'
     },
-    templateId: 'have to fill!!'
+    templateId: '701316e0-9a16-11ec-8e71-9de0f0dfe7f9'
   })
 };
+
+
 
